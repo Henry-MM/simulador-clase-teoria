@@ -1,0 +1,121 @@
+h1,h2 {
+    color: #14213D;
+}
+
+/* span {
+    color: #FFFFFF;
+} */
+
+/**/
+
+.JsonView {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.JsonView > .Header,
+.JsonView > .Footer {
+    background: #14213D;
+    color: #FCA311;
+}
+
+
+/* ======== Content ========*/
+.JsonView__content {
+    background: #e5e5e5;
+    display: flex;
+    flex-flow: column;
+    padding: 15px 40px;
+    gap: 1.5rem;
+}
+
+.JsonView__content > div {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-flow: wrap;
+}
+/**/
+
+
+/* ======== Content Logo ========*/
+.JsonView__logos {
+    justify-content: space-between;
+}
+
+.JsonView__logos img {
+    width: auto;
+    height: 120px;
+}
+/**/
+
+
+/* ======== Content Info ========*/
+.JsonView__project_info {
+    justify-content: space-evenly;
+    gap: 2rem;
+    font-size: 1.5rem;
+}
+
+.JsonView__project_info h4 {
+    display: inline-block;
+} 
+/**/
+
+
+/* ======== Content Devs ========*/
+.JsonView__devs_container {
+    gap: 2rem;;
+}
+
+.JsonView__devs_container > h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.devs__wrapper {
+    display: flex;
+    flex-flow: wrap;
+    gap: 2rem;
+}
+/**/
+
+
+/* ======== Content Start btn ========*/
+.JsonView__buttons_container {
+    justify-content: center;
+}
+
+.start_jsonView_btn {
+
+    border-radius: 8px;
+    padding: 10px 15px;
+    border: unset;
+
+    background: #FCA311;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 600;
+    
+}
+
+.start_jsonView_btn:hover {
+    cursor: pointer;
+    background: #14213D;
+}
+/**/
+
+
+@media screen and (max-width: 480px) {
+    .JsonView__content {
+        gap: 2rem;
+    }
+    
+    .JsonView__content > div {
+        justify-content: center;
+        text-align: center;
+    }
+}

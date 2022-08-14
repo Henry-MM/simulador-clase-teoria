@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import ReactDOM from "react-dom";
 
 import Content from "../../Components/Content/Content";
 import Footer from "../../Components/Footer/Footer";
@@ -86,7 +85,7 @@ const Simulator = () => {
 
             {/* DEBE IR OCULTO HASTA QUE EL USUARIO AGREGUE EL JSON */}
             <div className="Simulator__buttons_container">
-              <Link to="./view">
+              <Link to="/view">
                 <Button className="start_simulator_btn">Visualizar Data</Button>
               </Link>
             </div>

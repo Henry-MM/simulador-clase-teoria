@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import App from '../App'
 import Introduction from '../Pages/Introduction/Introduction';
-import JsonView from '../Pages/JsonView';
+import JsonView from '../Pages/JsonView/JsonView';
 import Simulator from '../Pages/Simulator/Simulator';
 
 const Router = () => {
