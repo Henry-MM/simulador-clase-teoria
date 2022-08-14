@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import App from '../App'
 import Introduction from '../Pages/Introduction/Introduction';
 import JsonView from '../Pages/JsonView';
-import Simulator from '../Pages/Simulator';
+import Simulator from '../Pages/Simulator/Simulator';
 
 const Router = () => {
     return (

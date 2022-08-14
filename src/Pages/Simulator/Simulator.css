@@ -1,0 +1,113 @@
+/* ======== Generals ========*/
+h3,h4 {
+    color: #FCA311;
+}
+
+span {
+    color: #FFFFFF;
+}
+/**/
+
+.Simulator {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.Simulator > .Header,
+.Simulator > .Footer {
+    background: #14213D;
+    color: #FCA311;
+}
+
+
+/* ======== Content ========*/
+.Simulator__content {
+    background: #e5e5e5;
+    display: flex;
+    flex-flow: column;
+    padding: 15px 40px;
+    gap: 1.5rem;
+}
+
+.Simulator__content > div {
+    display: flex;
+    align-items: center;
+    flex-flow: wrap;
+}
+/**/
+
+
+/* ======== Content Logo ========*/
+.Simulator__logos {
+    justify-content: space-between;
+}
+
+.Simulator__logos img {
+    width: auto;
+    height: 120px;
+}
+/**/
+
+
+/* ======== Content Info ========*/
+.Simulator__project_info {
+    justify-content: space-evenly;
+    gap: 2rem;
+    font-size: 1.5rem;
+}
+
+.Simulator__project_info h4 {
+    display: inline-block;
+} 
+/**/
+
+
+/* ======== Content Devs ========*/
+.Simulator__devs_container {
+    gap: 2rem;;
+}
+
+.Simulator__devs_container > h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.devs__wrapper {
+    display: flex;
+    flex-flow: wrap;
+    gap: 2rem;
+}
+/**/
+
+
+/* ======== Content Start btn ========*/
+.Simulator__buttons_container {
+    justify-content: center;
+}
+
+.start_simulator_btn {
+    background: #14213D;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 600;
+    
+}
+
+.start_simulator_btn:hover {
+    background: #f5ab35;
+}
+/**/
+
+
+@media screen and (max-width: 480px) {
+    .Simulator__content {
+        gap: 2rem;
+    }
+    
+    .Simulator__content > div {
+        justify-content: center;
+        text-align: center;
+    }
+}
