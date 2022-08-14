@@ -6,11 +6,11 @@ import Footer from "../../Components/Footer/Footer";
 import Header from "../../Components/Header/Header";
 import Dev from "../../Components/Dev/Dev";
 import Button from "../../Components/Button/Button";
+import { Link } from "react-router-dom";
 
 import "./Simulator.css";
 
 const Simulator = () => {
-    
   const optionsProducts = [
     { label: "ejemplo1", value: "ejemplo1" },
     { label: "ejemplo2", value: "ejemplo2" },
@@ -84,6 +84,13 @@ const Simulator = () => {
               />
             </div>
 
+            {/* DEBE IR OCULTO HASTA QUE EL USUARIO AGREGUE EL JSON */}
+            <div className="Simulator__buttons_container">
+              <Link to="./view">
+                <Button className="start_simulator_btn">Visualizar Data</Button>
+              </Link>
+            </div>
+
             <div className="">
               <label className="input__label">
                 <p>Nombre del archivo</p>
@@ -96,7 +103,9 @@ const Simulator = () => {
                 Articulo o Producto
                 <select value={value} onChange={handleChangeSelectProduct}>
                   {optionsProducts.map((optionsProducts) => (
-                    <option value={optionsProducts.value}>{optionsProducts.label}</option>
+                    <option value={optionsProducts.value}>
+                      {optionsProducts.label}
+                    </option>
                   ))}
                 </select>
               </label>
@@ -107,20 +116,20 @@ const Simulator = () => {
                 Seleccione una fecha
                 <select value={valueYears} onChange={handleChangeSelectYears}>
                   {optionsYears.map((optionsYears) => (
-                    <option value={optionsYears.valueYears}>{optionsYears.label}</option>
+                    <option value={optionsYears.valueYears}>
+                      {optionsYears.label}
+                    </option>
                   ))}
                 </select>
-
                 <select value={valueMonths} onChange={handleChangeSelectMonths}>
                   {optionsMonths.map((optionsMonths) => (
-                    <option value={optionsMonths.value}>{optionsMonths.label}</option>
+                    <option value={optionsMonths.value}>
+                      {optionsMonths.label}
+                    </option>
                   ))}
                 </select>
-
               </label>
             </div>
-
-
           </div>
           <div className="Simulator__column_content">
             <div>
