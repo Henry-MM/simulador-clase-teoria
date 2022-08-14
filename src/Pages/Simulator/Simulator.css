@@ -129,3 +129,47 @@ h1,h2 {
         text-align: center;
     }
 }
+
+.input__label{
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+    color: #14213D;
+    justify-content: center;
+    text-align: center;
+}
+
+.input__label input,
+.input__label select {
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 1.1rem;
+    background: #e5e5e5;
+    color: #14213D;
+    border-radius: 8px;
+    box-sizing: border-box;
+    border: 3px solid #14213D;
+}
+
+.dropdown__label{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-flow: column;
+    gap: 10px;
+    color: #14213D;
+}
+
+.dropdown__label input,
+.dropdown__label select {
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 1.1rem;
+    background: #FFFFFF;
+    color: #14213D;
+    border-radius: 8px;
+    box-sizing: border-box;
+    border: 3px solid #14213D;
+}

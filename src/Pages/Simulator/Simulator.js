@@ -10,8 +10,42 @@ import Button from "../../Components/Button/Button";
 import "./Simulator.css";
 
 const Simulator = () => {
-  const inputRef = useRef(null);
+    
+  const optionsProducts = [
+    { label: "ejemplo1", value: "ejemplo1" },
+    { label: "ejemplo2", value: "ejemplo2" },
+    { label: "ejemplo3", value: "ejemplo3" },
+  ];
 
+  const optionsYears = [
+    { label: "ejemplo1", value: "ejemplo1" },
+    { label: "ejemplo2", value: "ejemplo2" },
+    { label: "ejemplo3", value: "ejemplo3" },
+  ];
+
+  const optionsMonths = [
+    { label: "ejemplo1", value: "ejemplo1" },
+    { label: "ejemplo2", value: "ejemplo2" },
+    { label: "ejemplo3", value: "ejemplo3" },
+  ];
+
+  const [value, setValue] = React.useState("Product");
+  const [valueYears, setValueYears] = React.useState("Years");
+  const [valueMonths, setValueMonths] = React.useState("Months");
+
+  const handleChangeSelectProduct = (event) => {
+    setValue(event.target.value);
+  };
+
+  const handleChangeSelectYears = (event) => {
+    setValueYears(event.target.valueYears);
+  };
+
+  const handleChangeSelectMonths = (event) => {
+    setValueMonths(event.target.valueMonths);
+  };
+
+  const inputRef = useRef(null);
   const fileRef = useRef();
 
   const handleChange = (e) => {
@@ -49,6 +83,44 @@ const Simulator = () => {
                 hidden
               />
             </div>
+
+            <div className="">
+              <label className="input__label">
+                <p>Nombre del archivo</p>
+                <input name="file" id="file" placeholder="Data.json" disabled />
+              </label>
+            </div>
+
+            <div>
+              <label className="dropdown__label">
+                Articulo o Producto
+                <select value={value} onChange={handleChangeSelectProduct}>
+                  {optionsProducts.map((optionsProducts) => (
+                    <option value={optionsProducts.value}>{optionsProducts.label}</option>
+                  ))}
+                </select>
+              </label>
+            </div>
+
+            <div>
+              <label className="dropdown__label">
+                Seleccione una fecha
+                <select value={valueYears} onChange={handleChangeSelectYears}>
+                  {optionsYears.map((optionsYears) => (
+                    <option value={optionsYears.valueYears}>{optionsYears.label}</option>
+                  ))}
+                </select>
+
+                <select value={valueMonths} onChange={handleChangeSelectMonths}>
+                  {optionsMonths.map((optionsMonths) => (
+                    <option value={optionsMonths.value}>{optionsMonths.label}</option>
+                  ))}
+                </select>
+
+              </label>
+            </div>
+
+
           </div>
           <div className="Simulator__column_content">
             <div>
