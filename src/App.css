@@ -1,4 +1,4 @@
 .App > div{
     display: flex;
-    flex-flow: column;
+    flex-flow: column ;
 }

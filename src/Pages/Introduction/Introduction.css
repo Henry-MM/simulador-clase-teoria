@@ -1,3 +1,13 @@
+/* ======== Generals ========*/
+h3,h4 {
+    color: #FCA311;
+}
+
+span {
+    color: #FFFFFF;
+}
+/**/
+
 .Introduction {
     width: 100%;
     height: 100%;
@@ -9,8 +19,94 @@
     background: #e5e5e5;
 }
 
+
+/* ======== Content ========*/
 .Introduction__content {
     background: #14213D;
     display: flex;
     flex-flow: column;
+    padding: 15px 40px;
+    gap: 1.5rem;
+}
+
+.Introduction__content > div {
+    display: flex;
+    align-items: center;
+    flex-flow: wrap;
+}
+/**/
+
+
+/* ======== Content Logo ========*/
+.Introduction__logos {
+    justify-content: space-between;
+}
+
+.Introduction__logos img {
+    width: auto;
+    height: 120px;
+}
+/**/
+
+
+/* ======== Content Info ========*/
+.Introduction__project_info {
+    justify-content: space-evenly;
+    gap: 2rem;
+    font-size: 1.5rem;
+}
+
+.Introduction__project_info h4 {
+    display: inline-block;
+} 
+/**/
+
+
+/* ======== Content Devs ========*/
+.Introduction__devs_container {
+    gap: 2rem;;
+}
+
+.Introduction__devs_container > h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.devs__wrapper {
+    display: flex;
+    flex-flow: wrap;
+    gap: 2rem;
+}
+/**/
+
+
+/* ======== Content Start btn ========*/
+.Introduction__buttons_container {
+    justify-content: center;
+}
+
+.start_btn {
+    background: #FCA311;
+    color: #000000;
+    font-size: 1rem;
+    font-weight: 600;
+    
+}
+
+.start_btn:hover {
+    background: #f5ab35;
+}
+/**/
+
+
+@media screen and (max-width: 480px) {
+    .Introduction__content {
+        gap: 2rem;
+    }
+    
+    .Introduction__content > div {
+        justify-content: center;
+        text-align: center;
+    }
 }
