@@ -1,11 +1,12 @@
 /* ======== Generals ========*/
-h3,h4 {
-    color: #FCA311;
+h1,h2 {
+    color: #14213D;
 }
 
-span {
-    color: #FFFFFF;
-}
+/* span {
+    color: #14213D;
+} */
+
 /**/
 
 .Simulator {
@@ -28,27 +29,54 @@ span {
     flex-flow: column;
     padding: 15px 40px;
     gap: 1.5rem;
+
 }
 
 .Simulator__content > div {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-flow: wrap;
+
+    width: 100%;
+}
+
+.Row_content {
+    background: #e5e5e5;
+    display: flex;
+    flex-flow: row;
+    padding: 15px 40px;
+    gap: 1.5rem;
+
+}
+
+.Row_content > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: wrap;
+
+    width: 100%;
+}
+
+.Simulator__column_content {
+    background: #e5e5e5;
+    display: flex;
+    flex-flow: column;
+    padding: 15px 40px;
+    gap: 1.5rem;
+
+}
+
+.Simulator__column_content > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: wrap;
+
+    width: 100%;
 }
 /**/
-
-
-/* ======== Content Logo ========*/
-.Simulator__logos {
-    justify-content: space-between;
-}
-
-.Simulator__logos img {
-    width: auto;
-    height: 120px;
-}
-/**/
-
 
 /* ======== Content Info ========*/
 .Simulator__project_info {
@@ -88,6 +116,11 @@ span {
 }
 
 .start_simulator_btn {
+
+    border-radius: 8px;
+    padding: 10px 15px;
+    border: unset;
+
     background: #14213D;
     color: #FFFFFF;
     font-size: 1rem;
@@ -96,6 +129,7 @@ span {
 }
 
 .start_simulator_btn:hover {
+    cursor: pointer;
     background: #f5ab35;
 }
 /**/

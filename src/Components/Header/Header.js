@@ -4,7 +4,7 @@ import './Header.css'
 const Header = ({ className }) => {
     return (
         <header className={`Header ${className}`}>
-            <p>Proyecto Final</p>
+            <p>Pronóstico de Ventas</p>
         </header>
     )
 }
