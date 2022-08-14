@@ -41,28 +41,11 @@ h1,h2 {
     width: 100%;
 }
 
-.Row_content {
-    background: #e5e5e5;
-    display: flex;
-    flex-flow: row;
-    padding: 15px 40px;
-    gap: 1.5rem;
-
-}
-
-.Row_content > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: wrap;
-
-    width: 100%;
-}
-
 .Simulator__column_content {
     background: #e5e5e5;
     display: flex;
     flex-flow: column;
+    flex-grow: 1;
     padding: 15px 40px;
     gap: 1.5rem;
 
@@ -76,6 +59,7 @@ h1,h2 {
 
     width: 100%;
 }
+
 /**/
 
 /* ======== Content Info ========*/

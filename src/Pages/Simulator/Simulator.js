@@ -36,7 +36,7 @@ const Simulator = () => {
                         su negocio puede tener en los proximos meses 
                     </h2>
                 </div>
-                <div className="Row__content">
+                <div className="">
                     <div className="Simulator__column_content">
                         <div className="Simulator__buttons_container">
                                 <button className="start_simulator_btn" onClick={() => fileRef.current.click()}>
@@ -53,11 +53,10 @@ const Simulator = () => {
                     </div>
                     <div className="Simulator__column_content">
                         <div>
-                        <h1>HOLA</h1>
+                            <h1>Pronóstico de ventas</h1>
+                        </div>
+                        <h1>Inicio de Tabla</h1>
                     </div>
-                        <h1>HOLA</h1>
-                    </div>
-
                 </div>
             </Content>
             <Footer/>
