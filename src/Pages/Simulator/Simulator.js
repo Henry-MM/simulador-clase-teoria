@@ -8,6 +8,26 @@ import { Link } from "react-router-dom";
 
 import "./Simulator.css";
 import SimulatorTable from "../../Components/SimulatorTable/SimulatorTable";
+import { getFileContentAsJSON } from "../../utils/parseFile";
+
+const getYearsFromCurrent = (quantity = 5) => {
+
+	const currentYear = new Date().getFullYear();
+	const yearsFormat = []
+
+	for (let index = 0; index < quantity; index++) {
+
+		const year = currentYear + index;
+
+		yearsFormat.push({
+			id: "y-" + year,
+			label: year,
+			value: year,
+		});
+	}
+
+	return yearsFormat;
+}
 
 const optionsProducts = [
 	{ id: "p-1", label: "ejemplo1", value: "ejemplo1" },
@@ -15,16 +35,19 @@ const optionsProducts = [
 	{ id: "p-3", label: "ejemplo3", value: "ejemplo3" },
 ];
 
-const optionsYears = [
-	{ id: "y-1", label: "ejemplo1", value: "ejemplo1" },
-	{ id: "y-2", label: "ejemplo2", value: "ejemplo2" },
-	{ id: "y-3", label: "ejemplo3", value: "ejemplo3" },
-];
-
 const optionsMonths = [
-	{ id: "m-1", label: "ejemplo1", value: "ejemplo1" },
-	{ id: "m-2", label: "ejemplo2", value: "ejemplo2" },
-	{ id: "m-3", label: "ejemplo3", value: "ejemplo3" },
+	{ id: "m-Enero", label: "Enero", value: "Enero" },
+	{ id: "m-Febrero", label: "Febrero", value: "Febrero" },
+	{ id: "m-Marzo", label: "Marzo", value: "Marzo" },
+	{ id: "m-Abril", label: "Abril", value: "Abril" },
+	{ id: "m-Mayo", label: "Mayo", value: "Mayo" },
+	{ id: "m-Junio", label: "Junio", value: "Junio" },
+	{ id: "m-Julio", label: "Julio", value: "Julio" },
+	{ id: "m-Agosto", label: "Agosto", value: "Agosto" },
+	{ id: "m-Septiembre", label: "Septiembre", value: "Septiembre" },
+	{ id: "m-Octubre", label: "Octubre", value: "Octubre" },
+	{ id: "m-Noviembre", label: "Noviembre", value: "Noviembre" },
+	{ id: "m-Diciembre", label: "Diciembre", value: "Diciembre" }
 ];
 
 const simulationResult = [
@@ -41,6 +64,7 @@ const Simulator = () => {
 	const [valueYears, setValueYears] = useState("Years");
 	const [valueMonths, setValueMonths] = useState("Months");
 	const [selectedFile, setSelectedfile] = useState(null);
+	const [data, setData] = useState(null);
 
 	const handleChangeSelectProduct = (evt) => {
 		setProduct(evt.target.value);
@@ -56,9 +80,15 @@ const Simulator = () => {
 
 	const fileRef = useRef();
 
-	const handleChange = (evt) => {
+	const handleChange = async (evt) => {
+
 		const [file] = evt.target.files;
 		setSelectedfile(file);
+
+		if (file.type !== "application/json") return false;
+
+		const dataJSON = await getFileContentAsJSON(file);
+		setData(dataJSON);
 	};
 
 	return (
@@ -89,6 +119,7 @@ const Simulator = () => {
 								onChange={handleChange}
 								multiple={false}
 								type="file"
+								accept="application/json"
 								hidden
 							/>
 						</div>
@@ -129,9 +160,9 @@ const Simulator = () => {
 							<label className="dropdown__label">
 								Seleccione una fecha
 								<select value={valueYears} onChange={handleChangeSelectYears}>
-									{optionsYears.map(({ valueYears, label, id }) => (
+									{getYearsFromCurrent().map(({ id, label, value }) => (
 										<option
-											value={valueYears}
+											value={value}
 											key={id}
 										>
 											{label}
