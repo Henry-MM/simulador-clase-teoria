@@ -40,7 +40,7 @@ const Simulator = () => {
 	const [product, setProduct] = useState("Product");
 	const [valueYears, setValueYears] = useState("Years");
 	const [valueMonths, setValueMonths] = useState("Months");
-	const [selectedFile, setSelectedfile] = useState("Data.json");
+	const [selectedFile, setSelectedfile] = useState(null);
 
 	const handleChangeSelectProduct = (evt) => {
 		setProduct(evt.target.value);
@@ -58,7 +58,7 @@ const Simulator = () => {
 
 	const handleChange = (evt) => {
 		const [file] = evt.target.files;
-		setSelectedfile(file.name);
+		setSelectedfile(file);
 	};
 
 	return (
@@ -93,18 +93,19 @@ const Simulator = () => {
 							/>
 						</div>
 
-						{/* DEBE IR OCULTO HASTA QUE EL USUARIO AGREGUE EL JSON */}
-						<div className="Simulator__buttons_container">
-							<Link to="/view">
-								<Button className="start_simulator_btn">Visualizar Data</Button>
-							</Link>
-						</div>
+						{selectedFile &&
+							<div className="Simulator__buttons_container">
+								<Link to="/view">
+									<Button className="start_simulator_btn">Visualizar Data</Button>
+								</Link>
+							</div>
+						}
 
 						<div className="file-name__wrapper">
 							<label className="input__label">
 								<p>Nombre del archivo</p>
 								{/* <input name="file" id="file" value={selectedFile} disabled /> */}
-								<p className="file-name" title={selectedFile}>{selectedFile}</p>
+								<p className="file-name" title={selectedFile?.name ?? ''}>{selectedFile?.name ?? "Data.json"}</p>
 							</label>
 						</div>
 
