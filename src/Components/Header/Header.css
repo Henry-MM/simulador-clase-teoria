@@ -1,0 +1,7 @@
+@import url("../../Shared/Style/Header&Footer.css");
+
+.Header {
+    padding: 2rem 0;
+    font-size: 2.4rem;
+    font-weight: 600;
+}
