@@ -1,16 +1,19 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Content from '../../Components/Content/Content'
 import Footer from '../../Components/Footer/Footer'
 import Header from '../../Components/Header/Header'
+import Button from '../../Components/Button/Button'
 import Dev from '../../Components/Dev/Dev'
 
+import './Introduction.css'
 import isLogo from '../../Assets/images/logoIs.png'
 import unahLogo from '../../Assets/images/logo-unah.png'
 import henry from '../../Assets/images/Henry.jpg'
 import denzell from '../../Assets/images/denzell.png'
-import './Introduction.css'
-import Button from '../../Components/Button/Button'
-import { Link } from 'react-router-dom'
+import mauri from '../../Assets/images/mauri.png'
+import fernando from '../../Assets/images/fernando.jpg'
+import andrea from '../../Assets/images/Andrea.png'
 
 
 const Introduction = () => {
@@ -38,23 +41,23 @@ const Introduction = () => {
                         <Dev 
                             photoURL={henry}
                             alt="developer"
-                            name="Henry"/>
+                            name="Henry Espinoza"/>
                         <Dev 
                             photoURL={denzell}
                             alt="developer"
-                            name="Denzell"/>
+                            name="Denzell Griffith"/>
                         <Dev 
-                            photoURL={henry}
+                            photoURL={andrea}
                             alt="developer"
-                            name="Henry"/>
+                            name="Andrea Calix"/>
                         <Dev 
-                            photoURL={henry}
+                            photoURL={mauri}
                             alt="developer"
-                            name="Henry"/>
+                            name="Olvin Ramos"/>
                         <Dev 
-                            photoURL={henry}
+                            photoURL={fernando}
                             alt="developer"
-                            name="Henry"/>
+                            name="Fernando Garcia"/>
                     </div>
                 </div>
                 <div className="Introduction__buttons_container">

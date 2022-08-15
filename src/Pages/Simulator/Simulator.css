@@ -57,7 +57,7 @@ h1,h2 {
     justify-content: center;
     flex-flow: wrap;
 
-    width: 100%;
+    /* width: 100%; */
 }
 
 /**/
@@ -114,21 +114,10 @@ h1,h2 {
 
 .start_simulator_btn:hover {
     cursor: pointer;
-    background: #f5ab35;
+    background: #1e3057;
 }
 /**/
 
-
-@media screen and (max-width: 480px) {
-    .Simulator__content {
-        gap: 2rem;
-    }
-    
-    .Simulator__content > div {
-        justify-content: center;
-        text-align: center;
-    }
-}
 
 .input__label{
     width: 50%;
@@ -137,6 +126,7 @@ h1,h2 {
     gap: 10px;
     color: #14213D;
     justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
@@ -156,6 +146,7 @@ h1,h2 {
     width: 50%;
     display: flex;
     justify-content: center;
+    align-items: center;
     text-align: center;
     flex-flow: column;
     gap: 10px;
@@ -163,8 +154,10 @@ h1,h2 {
 }
 
 .dropdown__label input,
-.dropdown__label select {
+.dropdown__label select,
+.file-name {
     width: 100%;
+    max-width: 200px;
     padding: 10px 10px;
     font-size: 1.1rem;
     background: #FFFFFF;
@@ -173,3 +166,39 @@ h1,h2 {
     box-sizing: border-box;
     border: 3px solid #14213D;
 }
+
+.file-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.content__table {
+    align-self: flex-start;
+    flex: 5 0;
+}
+
+.content__controls {
+    flex: 1 1 350px;
+}
+
+
+
+@media screen and (max-width: 860px) {
+    .dropdown__label input,
+    .dropdown__label select,
+    .file-name {
+        max-width: unset;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Simulator__content {
+        gap: 2rem;
+    }
+    
+    .Simulator__content > div {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
