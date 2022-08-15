@@ -2,6 +2,7 @@ import { Outlet } from 'react-router-dom';
 import './App.css';
 
 function App() {
+
 	return (
 		<div className="App">
 			<Outlet />
@@ -10,3 +11,13 @@ function App() {
 }
 
 export default App;
+
+
+/*
+	const simulationRecord = [{
+		index: 0,
+		duration: 0,
+		result: {},
+		fileName: "test.json"
+	}]
+*/

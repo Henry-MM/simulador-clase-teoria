@@ -64,7 +64,7 @@ const Simulator = () => {
 	const [valueYears, setValueYears] = useState("Years");
 	const [valueMonths, setValueMonths] = useState("Months");
 	const [selectedFile, setSelectedfile] = useState(null);
-	const [data, setData] = useState(null);
+	const [selectedData, setSelectedData] = useState(null);
 
 	const handleChangeSelectProduct = (evt) => {
 		setProduct(evt.target.value);
@@ -88,7 +88,7 @@ const Simulator = () => {
 		if (file.type !== "application/json") return false;
 
 		const dataJSON = await getFileContentAsJSON(file);
-		setData(dataJSON);
+		setSelectedData(dataJSON);
 	};
 
 	return (
@@ -126,7 +126,7 @@ const Simulator = () => {
 
 						{selectedFile &&
 							<div className="Simulator__buttons_container">
-								<Link to="/view">
+								<Link to="/view" state={{selectedData}}>
 									<Button className="start_simulator_btn">Visualizar Data</Button>
 								</Link>
 							</div>

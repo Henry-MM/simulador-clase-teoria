@@ -95,7 +95,7 @@ h1,h2 {
     padding: 10px 15px;
     border: unset;
 
-    background: #FCA311;
+    background: #14213D;
     color: #FFFFFF;
     font-size: 1rem;
     font-weight: 600;
@@ -104,7 +104,7 @@ h1,h2 {
 
 .start_jsonView_btn:hover {
     cursor: pointer;
-    background: #14213D;
+    background: #223868;
 }
 /**/
 
