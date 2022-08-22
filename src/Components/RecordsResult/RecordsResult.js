@@ -9,16 +9,12 @@ const timeA = today.toLocaleTimeString('en-US');
 const RecordsResult = () => {
 
     const [{inputFile}] = useContext(SimulatorInputContenxt);
-    const count = 0;
 
     const recordsResults = [
     
-        { id: "s-1", id_record: count + 1, documentName: inputFile.fileName, date_table: dateA, hour_table: timeA},
-        { id: "s-1", id_record: count + 1, documentName: inputFile.fileName, date_table: dateA, hour_table: timeA},
-        { id: "s-1", id_record: count + 1, documentName: inputFile.fileName, date_table: dateA, hour_table: timeA},
-        /* { id: "s-2", id_record: "2", documentName: 2023, date_table: dateA, hour_table: timeA},
-        { id: "s-3", id_record: "3", documentName: 2023, date_table: dateA, hour_table: timeA},
-        { id: "s-4", id_record: "4", documentName: 2023, date_table: dateA, hour_table: timeA}, */
+        { id: "s-1", id_record: "1", documentName: inputFile.fileName, date_table: dateA, hour_table: timeA},
+        { id: "s-2", id_record: "2", documentName: inputFile.fileName, date_table: dateA, hour_table: timeA},
+        { id: "s-3", id_record: "3", documentName: inputFile.fileName, date_table: dateA, hour_table: timeA},
     ];
 
     return (
