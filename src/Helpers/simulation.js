@@ -74,17 +74,6 @@ const getAllMonthsMinMaxByProduct = function (data, productName) {
     return minsMaxs;
 }
 
-const getMonthsInRange = function (start, end) {
-
-    const { month: startMonth, year: startYear } = start;
-    const { month: endMonth, year: endYear } = end;
-
-    const rangeByYear = [];
-
-
-
-}
-
 const getRandomNmber = function (min, max) {
     console.log(min, max)
     const randomNumber = Math.random() * (max - min) + min;
@@ -105,7 +94,7 @@ const getQuantityAverage = function (interval) {
 
     const average = randomArray.reduce((sum, number) => sum += number, 0) / randomArray.length;
 
-    return Math.round(average);
+    return Math.round(isNaN(average) ? 0 : average);
 }
 
 const getAmountOfYears = function (dates) {
@@ -121,7 +110,7 @@ const makePredictionFullYear = function (intervalsByMonths, productPrice = 0) {
     const prediction = months.reduce((data, currentMonth) => {
 
         if (intervalsByMonths[currentMonth]) {
-            const quantity = getQuantityAverage(intervalsByMonths[currentMonth])
+            const quantity = getQuantityAverage(intervalsByMonths[currentMonth]) ?? 0
             data[currentMonth] = {
                 cantidad: quantity,
                 ventas: quantity * productPrice
