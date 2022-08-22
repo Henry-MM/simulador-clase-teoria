@@ -3,15 +3,18 @@ import { SimulatorInputContenxt, SimulatorOutputContenxt } from '../../Contexts/
 import { startSimulation } from '../../Helpers/simulation';
 import Button from '../Button/Button';
 import SimulatorTable from '../SimulatorTable/SimulatorTable'
+import "./SimulatorResult.css";
+
+import { Link } from "react-router-dom";
 
 import './SimulatorResult.css'
 
-const simulationResult = [
-    { id: "s-1", month: "Mayo", year: 2022, product: "azucar", quantity: 10, totalSell: 100 },
-    { id: "s-2", month: "Diciembre", year: 2023, product: "azucar", quantity: 10, totalSell: 100 },
-    { id: "s-3", month: "Noviembre", year: 2023, product: "azucar", quantity: 10, totalSell: 100 },
-    { id: "s-4", month: "Noviembre", year: 2023, product: "arroz", quantity: 10, totalSell: 100 },
-];
+// const simulationResult = [
+//     { id: "s-1", month: "Mayo", year: 2022, product: "azucar", quantity: 10, totalSell: 100 },
+//     { id: "s-2", month: "Diciembre", year: 2023, product: "azucar", quantity: 10, totalSell: 100 },
+//     { id: "s-3", month: "Noviembre", year: 2023, product: "azucar", quantity: 10, totalSell: 100 },
+//     { id: "s-4", month: "Noviembre", year: 2023, product: "arroz", quantity: 10, totalSell: 100 },
+// ];
 
 const formatResult = function (result) {
 
@@ -54,6 +57,7 @@ const SimulatorResult = () => {
 
     return (
         <div className="Simulator__column_content content__table">
+
             <h1>Pronóstico de ventas</h1>
             <SimulatorTable simulation={outputData[outputData.length - 1] || []} />
             <Button
@@ -62,6 +66,13 @@ const SimulatorResult = () => {
             >
                 Iniciar!
             </Button>
+
+            <div>
+                <Link to="/records">
+                    <Button className="start_simulatorResult_btn">Prueba de Corridas</Button>
+                </Link>
+            </div>
+            
         </div>
     )
 }

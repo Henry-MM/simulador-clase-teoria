@@ -5,6 +5,7 @@ import { SimulatorInputContenxt, SimulatorOutputContenxt } from '../Contexts/Sim
 import Introduction from '../Pages/Introduction/Introduction';
 import JsonView from '../Pages/JsonView/JsonView';
 import Simulator from '../Pages/Simulator/Simulator';
+import Records from '../Pages/Records/Records';
 import { defaultSimulatorDataInput, defaultSimulatorDataOutput, reduceSimulatorInputs, reduceSimulatorOutputs } from '../Reducers/Simulator';
 
 
@@ -27,6 +28,7 @@ const Router = () => {
                             <Route path="/" element={<Introduction />} />
                             <Route path="/simulator" element={<Simulator />} />
                             <Route path="/view" element={<JsonView />} />
+                            <Route path="/records" element={<Records />} />
                         </Route>
                     </Routes>
                 </SimulatorOutputContenxt.Provider>
