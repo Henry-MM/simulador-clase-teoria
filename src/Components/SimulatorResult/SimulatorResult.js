@@ -1,5 +1,9 @@
 import React from 'react'
 import SimulatorTable from '../SimulatorTable/SimulatorTable'
+import "./SimulatorResult.css";
+
+import Button from "../../Components/Button/Button";
+import { Link } from "react-router-dom";
 
 const simulationResult = [
 	{ id: "s-1", month: "Mayo", year: 2022, product: "azucar", quantity: 10, totalSell: 100 },
@@ -17,6 +21,12 @@ const SimulatorResult = () => {
             <div>
                 <SimulatorTable simulationResult={simulationResult} />
             </div>
+            <div>
+                <Link to="/records">
+                    <Button className="start_simulatorResult_btn">Prueba de Corridas</Button>
+                </Link>
+            </div>
+            
         </div>
     )
 }
