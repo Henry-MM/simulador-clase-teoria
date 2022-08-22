@@ -1,26 +1,27 @@
 import React from 'react'
-import { getCurrencyFormat } from '../../utils/formatNumber';
 import Table from '../Table/Table'
 
 const RecordsTable = ({ recordsResults }) => {
-
+    console.log(recordsResults);
     return (
         <Table>
             <thead>
                 <tr>
                     <th>ID</th>
                     <th>Nombre del Archivo</th>
+                    <th>Producto</th>
                     <th>Fecha</th>
                     <th>Hora</th>
                 </tr>
             </thead>
             <tbody>
-                {recordsResults.map(({ id, id_record,documentName, date_table, hour_table }) => (
+                {recordsResults.map(({ id, fileName, date, time, result }, i) => (
                     <tr key={id}>
-                        <td>{id_record}</td>
-                        <td>{documentName}</td>
-                        <td>{date_table}</td>
-                        <td>{hour_table}</td>
+                        <td>{i + 1}</td>
+                        <td>{fileName}</td>
+                        <td>{result[0].product}</td>
+                        <td>{date}</td>
+                        <td>{time}</td>
                     </tr>
                 ))}
             </tbody>

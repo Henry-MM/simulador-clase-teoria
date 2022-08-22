@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from 'uuid';
+
 const defaultSimulatorDataInput = {
     inputFile: {
         file: null,
@@ -49,7 +51,7 @@ const reduceSimulatorInputs = function (prevState, action) {
                     selectedProduct: selectedProduct
                 }
             }
-            
+
         case "changeProductList":
             return {
                 ...prevState,
@@ -91,15 +93,21 @@ const reduceSimulatorInputs = function (prevState, action) {
 
 const reduceSimulatorOutputs = function (prevState, action) {
 
-    const { result } = action.data;
-    
+    const { result, fileName } = action.data;
+
+    const today = new Date();
+    const date = today.toLocaleDateString('es-HN');
+    const time = today.toLocaleTimeString('es-HN');
+
     switch (action.type) {
         case "simulateResult":
             const results = prevState.slice();
             results.push({
-                date: "",
-                time: "",
-                result: result
+                id: uuidv4(),
+                date: date,
+                time: time,
+                result: result,
+                fileName: fileName
             });
 
             return results;

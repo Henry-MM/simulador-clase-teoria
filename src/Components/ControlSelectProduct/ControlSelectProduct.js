@@ -8,8 +8,6 @@ const ControlSelectProduct = () => {
 
     useEffect(() => {
 
-        console.log("hola");
-
         const uniqueProductsList = getProductListFromInputData(inputData.inputFile.data);
 
         dispatchSimulatorInput({
