@@ -70,7 +70,7 @@ const SimulatorResult = () => {
 
             <div>
                 <Link to="/records">
-                    <Button className="start_simulatorResult_btn">Prueba de Corridas</Button>
+                    <Button className="start_simulatorResult_btn">Historial de Corridas</Button>
                 </Link>
             </div>
             
