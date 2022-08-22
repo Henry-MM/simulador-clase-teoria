@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router-dom';
+import { ChakraProvider } from '@chakra-ui/react'
 import './App.css';
 
 import { extendTheme, ChakraProvider } from '@chakra-ui/react'
@@ -17,7 +18,11 @@ const theme = extendTheme({ colors })
 function App() {
 
 	return (
+<<<<<<< HEAD
 		<ChakraProvider theme={theme}>
+=======
+		<ChakraProvider>
+>>>>>>> Hespinoza
 			<div className="App">
 				<Outlet />
 			</div>

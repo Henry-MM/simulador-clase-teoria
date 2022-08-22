@@ -2,11 +2,6 @@
 h1,h2 {
     color: #14213D;
 }
-
-/* span {
-    color: #14213D;
-} */
-
 /**/
 
 .Simulator {
@@ -32,7 +27,7 @@ h1,h2 {
 
 }
 
-.Simulator__content > div {
+.Simulator__content {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,24 +93,6 @@ h1,h2 {
 .Simulator__buttons_container {
     justify-content: center;
 }
-
-.start_simulator_btn {
-
-    border-radius: 8px;
-    padding: 10px 15px;
-    border: unset;
-
-    background: #14213D;
-    color: #FFFFFF;
-    font-size: 1rem;
-    font-weight: 600;
-    
-}
-
-.start_simulator_btn:hover {
-    cursor: pointer;
-    background: #1e3057;
-}
 /**/
 
 
@@ -143,7 +120,7 @@ h1,h2 {
 }
 
 .dropdown__label{
-    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -153,11 +130,11 @@ h1,h2 {
     color: #14213D;
 }
 
-.dropdown__label input,
-.dropdown__label select,
+.customInputStyle,
+.customSelectStyle,
 .file-name {
     width: 100%;
-    max-width: 200px;
+    /* max-width: 200px; */
     padding: 10px 10px;
     font-size: 1.1rem;
     background: #FFFFFF;
