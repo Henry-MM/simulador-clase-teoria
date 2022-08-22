@@ -1,10 +1,7 @@
 import React, { useContext } from 'react'
 import RecordsTable from '../RecordsTable/RecordsTable'
-import { SimulatorInputContenxt, SimulatorOutputContenxt } from '../../Contexts/Simulator';
+import { SimulatorOutputContenxt } from '../../Contexts/Simulator';
 
-const today = new Date();
-const dateA = today.toLocaleDateString('en-US');
-const timeA = today.toLocaleTimeString('en-US');
 
 const RecordsResult = () => {
 
