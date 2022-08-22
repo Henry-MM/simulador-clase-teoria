@@ -1,6 +1,6 @@
 import { Select } from '@chakra-ui/react';
 import React, { useLayoutEffect, useState } from 'react'
-import { getMonthsSelectFormat, getMonthsSelectFormatFromCurrentDate, getYearsFromCurrent } from '../../Helpers/simulator';
+import { getMonthsSelectFormat, getMonthsSelectFormatFromCurrentDate, getYearsFromCurrent } from '../../Helpers/simulatorUI';
 import './RangeDateItem.css'
 
 const RangeDateItem = ({ type, date, onChangeDate }) => {

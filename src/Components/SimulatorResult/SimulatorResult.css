@@ -1,3 +1,4 @@
+
 /* ======== Content Start btn ========*/
 .SimulatorResult__buttons_container {
     justify-content: center;
@@ -19,4 +20,15 @@
 .start_simulatorResult_btn:hover {
     cursor: pointer;
     background: #223868;
+}
+
+.content__table {
+    align-self: flex-start;
+    align-items: center;
+    flex: 5 0;
+}
+
+.content__table > button {
+    width: 40%
+
 }

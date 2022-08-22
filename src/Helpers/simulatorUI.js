@@ -41,6 +41,11 @@ const getProductListFromInputData = (inputData) => {
 
     }, []);
 
+    products.unshift({
+        id: "default",
+        nombre: "Elige uno de tus productos"
+    });
+
     return products;
 }
 

@@ -15,7 +15,7 @@ const getTotal = (result) => {
     return getCurrencyFormat(total ?? 0);
 }
 
-const SimulatorTable = ({ simulationResult }) => {
+const SimulatorTable = ({ simulation }) => {
 
     return (
         <Table>
@@ -29,7 +29,7 @@ const SimulatorTable = ({ simulationResult }) => {
                 </tr>
             </thead>
             <tbody>
-                {simulationResult.map(({ id, month, year, product, quantity, totalSell }) => (
+                {simulation?.result?.map(({ id, month, year, product, quantity, totalSell }) => (
                     <tr key={id}>
                         <td>{month}</td>
                         <td>{year}</td>
@@ -42,7 +42,7 @@ const SimulatorTable = ({ simulationResult }) => {
             <tfoot>
                 <tr>
                     <td colSpan="3"><strong>Total</strong></td>
-                    <td colSpan="2">{getTotal(simulationResult)}</td>
+                    <td colSpan="2">{getTotal(simulation?.result || 0)}</td>
                 </tr>
             </tfoot>
         </Table>

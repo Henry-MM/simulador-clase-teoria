@@ -23,7 +23,7 @@ const defaultSimulatorDataInput = {
     }
 };
 
-const defaultSimulatorDataOutput = {};
+const defaultSimulatorDataOutput = [];
 
 const reduceSimulatorInputs = function (prevState, action) {
 
@@ -91,19 +91,18 @@ const reduceSimulatorInputs = function (prevState, action) {
 
 const reduceSimulatorOutputs = function (prevState, action) {
 
-    const { file, fileName, data } = action.data;
-
+    const { result } = action.data;
+    
     switch (action.type) {
-        case "changeUserInputs":
-            return {
-                ...prevState,
-                input: {
-                    ...prevState.input,
-                    file,
-                    fileName,
-                    data
-                }
-            }
+        case "simulateResult":
+            const results = prevState.slice();
+            results.push({
+                date: "",
+                time: "",
+                result: result
+            });
+
+            return results;
 
         default:
             break;

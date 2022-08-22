@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { SimulatorInputContenxt } from '../../Contexts/Simulator';
-import { getProductListFromInputData, getProductListSelectFormat } from '../../Helpers/simulator';
+import { getProductListFromInputData, getProductListSelectFormat } from '../../Helpers/simulatorUI';
 
 const ControlSelectProduct = () => {
 
