@@ -30,7 +30,7 @@ const SimulatorTable = ({ simulation }) => {
             </thead>
             <tbody>
                 {simulation?.result?.map(({ id, month, year, product, quantity, totalSell }) => (
-                    <tr key={id}>
+                    <tr key={id} hidden={quantity === 0}>
                         <td>{month}</td>
                         <td>{year}</td>
                         <td>{product}</td>
