@@ -7,3 +7,30 @@
 .Button:hover {
     cursor: pointer;
 }
+
+.blue_btn {
+
+    border-radius: 8px;
+    padding: 10px 15px;
+    border: unset;
+
+    background: #14213D;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.blue_btn:hover {
+    cursor: pointer;
+    background: #1e3057;
+}
+
+.blue_btn:disabled {
+    background-color: rgba(20, 33, 61, 0.31);
+}
+
+.blue_btn:disabled:hover {
+    background-color: rgba(20, 33, 61, 0.31);
+    cursor:not-allowed;
+    pointer-events: none;
+}

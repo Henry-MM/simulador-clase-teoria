@@ -1,12 +1,15 @@
 import { Outlet } from 'react-router-dom';
+import { ChakraProvider } from '@chakra-ui/react'
 import './App.css';
 
 function App() {
 
 	return (
-		<div className="App">
-			<Outlet />
-		</div>
+		<ChakraProvider>
+			<div className="App">
+				<Outlet />
+			</div>
+		</ChakraProvider>
 	);
 }
 

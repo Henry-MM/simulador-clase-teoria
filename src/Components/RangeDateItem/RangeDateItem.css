@@ -1,0 +1,7 @@
+.rangeDateItem {
+    display: flex;
+    flex-flow: row;
+    gap: 0.5rem;
+    align-items: center;
+}
+

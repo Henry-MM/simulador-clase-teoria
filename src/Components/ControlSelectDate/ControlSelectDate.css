@@ -1,0 +1,13 @@
+.range_date_wrapper {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: 0rem;
+}
+
+.dates_separator {
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+}
