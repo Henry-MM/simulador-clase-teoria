@@ -136,24 +136,8 @@ const JsonView = () => {
             <Header />
             <Content className="JsonView__content">
 
-                <div className="">
-                    <pre>
-                        <code>
-                            {JSON.stringify(inputFile.data, null, 10)}
-                        </code>
-                    </pre>
-                </div>
-
-                <div className="JsonView__buttons_container">
-                    <Link to="/simulator">
-                        <Button className="start_jsonView_btn">Regresar</Button>
-                    </Link>
-                </div>
-
-
                 <TableContainer>
                     <Table variant="striped" colorScheme="">
-                        <TableCaption>Imperial to metric conversion factors</TableCaption>
                         <Thead>
                         <Tr>
                             <Th>Año</Th>
@@ -165,10 +149,10 @@ const JsonView = () => {
                         </Thead>
                         <Tbody>
                             {
-                                json.map((item, index) => {
+                                inputFile.data.map((item, index) => {
                                     return (
                                         <Tr key={index}>
-                                            <Td>{item.anio}</Td>
+                                            <Td>{item.año}</Td>
                                             <Td colspan="4">
                                                 {
                                                     item.meses.map((mes, index) => {
@@ -176,14 +160,14 @@ const JsonView = () => {
                                                             <Table variant="unstyled">
                                                                 <Tbody>    
                                                                     <Tr key={index}>
-                                                                        <Td>{mes.name}</Td>
+                                                                        <Td>{mes.nombre}</Td>
                                                                         <Td>
                                                                             {
                                                                                 mes.productos.map((prod, index) => (
                                                                                     <Table variant="unstyled">
                                                                                         <Tbody>
                                                                                             <Tr key={index}>
-                                                                                                <Td>{prod.name}</Td>
+                                                                                                <Td>{prod.nombre}</Td>
                                                                                                 <Td>{prod.precio}</Td>
                                                                                                 <Td>{prod.cantidad}</Td>
                                                                                             </Tr>
@@ -204,15 +188,17 @@ const JsonView = () => {
                                 } )
                             }
                         </Tbody>
-                        <Tfoot>
-                        <Tr>
-                            <Th>To convert</Th>
-                            <Th>into</Th>
-                            <Th isNumeric>multiply by</Th>
-                        </Tr>
-                        </Tfoot>
                     </Table>
                     </TableContainer>
+
+                <div className="JsonView__buttons_container">
+                    <Link to="/simulator">
+                        <Button className="start_jsonView_btn">Regresar</Button>
+                    </Link>
+                </div>
+
+
+                
 
             </Content>
 
