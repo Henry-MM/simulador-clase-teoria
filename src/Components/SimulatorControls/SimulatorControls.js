@@ -3,6 +3,8 @@ import ControlInputData from '../ControlInputData/ControlInputData'
 import ControlSelectDate from '../ControlSelectDate/ControlSelectDate'
 import ControlSelectProduct from '../ControlSelectProduct/ControlSelectProduct'
 
+import './SimulatorControls.css'
+
 const SimulatorControls = () => {
 
     return (

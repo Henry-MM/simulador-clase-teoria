@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React from "react";
 
 import Content from "../../Components/Content/Content";
 import Footer from "../../Components/Footer/Footer";

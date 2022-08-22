@@ -1,0 +1,9 @@
+.content__table {
+    align-self: flex-start;
+    align-items: center;
+    flex: 5 0;
+}
+
+.content__table > button {
+    width: 40%
+}
