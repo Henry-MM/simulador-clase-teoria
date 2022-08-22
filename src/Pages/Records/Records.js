@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import Content from "../../Components/Content/Content";
 import Footer from "../../Components/Footer/Footer";
 import Header from "../../Components/Header/Header";
@@ -13,24 +13,24 @@ import "./Records.css";
 
 const Records = () => {
 
-  return (
-    <div className="Records">
-      <Header />
-      <Content className="Records__content">
-        <div className="title">
-          <h1>Captura de corridas realizadas</h1>
-        </div>
-        <RecordsResult />
-        <div className="Records__buttons_container">
-          <Link to="/simulator">
-            <Button className="start_records_btn">Regresar</Button>
-          </Link>
-        </div>
-      </Content>
+	return (
+		<div className="Records">
+			<Header />
+			<Content className="Records__content">
+				<div className="title">
+					<h1>Captura de corridas realizadas</h1>
+				</div>
+				<RecordsResult />
+				<div className="Records__buttons_container">
+					<Link to="/simulator">
+						<Button className="start_records_btn">Regresar</Button>
+					</Link>
+				</div>
+			</Content>
 
-      <Footer />
-    </div>
-  );
+			<Footer />
+		</div>
+	);
 };
 
 export default Records;

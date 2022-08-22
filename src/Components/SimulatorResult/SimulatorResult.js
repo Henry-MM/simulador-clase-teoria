@@ -45,12 +45,13 @@ const SimulatorResult = () => {
         const predictionResult = startSimulation(inputData);
         const resultformat = formatResult(predictionResult);
 
-        console.log("MIRAA", resultformat);
+        console.log("result: ", resultformat);
 
         dispatchSimulatorOutput({
             type: "simulateResult",
             data: {
-                result: resultformat.flat()
+                result: resultformat.flat(),
+                fileName: inputData.inputFile.fileName
             }
         })
     }
