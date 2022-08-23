@@ -26,7 +26,7 @@ h1,h2 {
     background: #e5e5e5;
     display: flex;
     flex-flow: column;
-    padding: 15px 40px;
+    padding: 39px 74px;
     gap: 1.5rem;
 }
 
@@ -108,6 +108,17 @@ h1,h2 {
 }
 /**/
 
+.productTable td{
+    width: 33%;
+}
+
+.monthTable > tbody > tr > td:nth-child(1) {
+    width: 33%;
+}
+
+thead {
+    text-align: center;
+}
 
 @media screen and (max-width: 480px) {
     .JsonView__content {

@@ -141,7 +141,7 @@ const JsonView = () => {
                         <Thead>
                         <Tr>
                             <Th>Año</Th>
-                            <Th>Mes</Th>
+                            <Th style={{width:"30%"}}>Mes</Th>
                             <Th>Producto</Th>
                             <Th>Precio</Th>
                             <Th>Cantidad</Th>
@@ -157,14 +157,14 @@ const JsonView = () => {
                                                 {
                                                     item.meses.map((mes, index) => {
                                                         return (
-                                                            <Table variant="unstyled">
+                                                            <Table variant="striped" colorScheme="#14213D" className="monthTable">
                                                                 <Tbody>    
                                                                     <Tr key={index}>
                                                                         <Td>{mes.nombre}</Td>
                                                                         <Td>
                                                                             {
                                                                                 mes.productos.map((prod, index) => (
-                                                                                    <Table variant="unstyled">
+                                                                                    <Table variant="unstyled" colorScheme="#14213D" className="productTable">
                                                                                         <Tbody>
                                                                                             <Tr key={index}>
                                                                                                 <Td>{prod.nombre}</Td>
