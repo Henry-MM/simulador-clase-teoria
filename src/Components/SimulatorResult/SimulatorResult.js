@@ -59,7 +59,7 @@ const SimulatorResult = () => {
     return (
         <div className="Simulator__column_content content__table">
 
-            <h1>Pronóstico de ventas</h1>
+            <h1 style={{fontSize: "2rem", fontWeight: "bold"}}>Pronóstico de ventas</h1>
             <SimulatorTable simulation={outputData[outputData.length - 1] || []} />
             <Button
                 className="blue_btn"

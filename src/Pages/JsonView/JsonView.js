@@ -131,6 +131,10 @@ const JsonView = () => {
     const [inputData, dispatchSimulatorInput] = useContext(SimulatorInputContenxt);
     const { inputFile } = inputData;
 
+    if (!inputFile.data) {
+        window.location.href = "/simulator";
+    }
+
     return (
         <div className="JsonView">
             <Header />
@@ -153,7 +157,7 @@ const JsonView = () => {
                                     return (
                                         <Tr key={index}>
                                             <Td>{item.año}</Td>
-                                            <Td colspan="4">
+                                            <Td colSpan="4">
                                                 {
                                                     item.meses.map((mes, index) => {
                                                         return (
